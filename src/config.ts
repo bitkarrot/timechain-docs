@@ -1,17 +1,17 @@
 export const SITE = {
-	title: 'Documentation',
-	description: 'Your website description.',
+	title: 'Timechain Academy',
+	description: '₿itcoin and ⚡️ Lightning Turbo Charged Space',
 	defaultLanguage: 'en_US',
 };
 
 export const OPEN_GRAPH = {
 	image: {
-		src: 'https://github.com/withastro/astro/blob/main/assets/social/banner-minimal.png?raw=true',
+		src: '/public/timechain-logo.png',
 		alt:
-			'astro logo on a starry expanse of space,' +
-			' with a purple saturn-like planet floating in the right foreground',
+			'timechain academy logo,' +
+			' with a gold lightning bolt inside a lightbulb and an electric purple background',
 	},
-	twitter: 'astrodotbuild',
+	twitter: '',
 };
 
 // This is the type of the frontmatter you put in the docs markdown files.
@@ -30,9 +30,9 @@ export const KNOWN_LANGUAGES = {
 } as const;
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
-export const GITHUB_EDIT_URL = `https://github.com/withastro/astro/tree/main/examples/docs`;
+export const GITHUB_EDIT_URL = `https://github.com/timechain-academy/timechain-docs/tree/main`;
 
-export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
+export const COMMUNITY_INVITE_URL = `https://timechain.academy`;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
@@ -47,11 +47,13 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		'Section Header': [
+		'Bitcoin': [
 			{ text: 'Introduction', link: 'en/introduction' },
 			{ text: 'Page 2', link: 'en/page-2' },
-			{ text: 'Page 3', link: 'en/page-3' },
 		],
-		'Another Section': [{ text: 'Page 4', link: 'en/page-4' }],
+		'Lightning': [{ text: 'Page 4', link: 'en/page-4' }],
+		'Dev Tools' : [
+			{ text: 'Page 3', link: 'en/page-3' },
+		]
 	},
 };
