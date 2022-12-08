@@ -47,13 +47,17 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		'Bitcoin': [
+		'Start here': [
 			{ text: 'Introduction', link: 'en/introduction' },
+		],
+		'Bitcoin': [
 			{ text: 'Page 2', link: 'en/page-2' },
 		],
-		'Lightning': [{ text: 'Page 4', link: 'en/page-4' }],
-		'Dev Tools' : [
+		'Lightning': [
 			{ text: 'Page 3', link: 'en/page-3' },
+		],
+		'Dev Tools' : [
+			{ text: 'Page 4', link: 'en/page-4' }
 		]
 	},
 };
