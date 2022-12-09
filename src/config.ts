@@ -45,10 +45,13 @@ export type Sidebar = Record<
 	typeof KNOWN_LANGUAGE_CODES[number],
 	Record<string, { text: string; link: string }[]>
 >;
+
+
 export const SIDEBAR: Sidebar = {
 	en: {
-		'Start here': [
+		'Intro': [
 			{ text: 'Introduction', link: 'en/introduction' },
+			{ text: 'Markdown Syntax', link: 'en/markdown'},
 		],
 		'Bitcoin': [
 			{ text: 'Page 2', link: 'en/page-2' },
