@@ -137,7 +137,7 @@ export default function Counter() {
 
 **Below we embed a Local image**
 
-![a cat called Lulu](../../../public/images/lulu.jpg)
+![a cat called Lulu](/images/lulu.jpg)
 
 **and this is a Remote image from https://i.pinimg.com**
 
