@@ -19,7 +19,7 @@ npm create astro@latest -- --template docs
 - ✅ **Full Markdown support**
 - ✅ **Responsive mobile-friendly design**
 - ✅ **Sidebar navigation**
-- ✅ **Search (powered by Algolia)**
+- ✅ **Search**
 - ✅ **Multi-language i18n**
 - ✅ **Automatic table of contents**
 - ✅ **Automatic list of contributors**
@@ -87,16 +87,23 @@ For more SEO related properties, look at `src/components/HeadSEO.astro`
 The sidebar navigation is controlled by the `SIDEBAR` variable in your `src/config.ts` file. You can customize the sidebar by modifying this object. A default, starter navigation has already been created for you.
 
 ```ts
-export const SIDEBAR = {
-  en: [
-    { text: "Section Header", header: true },
-    { text: "Introduction", link: "en/introduction" },
-    { text: "Page 2", link: "en/page-2" },
-    { text: "Page 3", link: "en/page-3" },
 
-    { text: "Another Section", header: true },
-    { text: "Page 4", link: "en/page-4" },
-  ],
+export const SIDEBAR: Sidebar = {
+	en: {
+		'Start here': [
+			{ text: 'Introduction', link: 'en/introduction' },
+			{ text: 'Markdown Syntax', link: 'en/markdown'},
+		],
+		'Bitcoin': [
+			{ text: 'Introduction', link: 'en/bitcoin/intro' },
+		],
+		'Lightning': [
+			{ text: 'Introduction', link: 'en/lightning/intro' },
+		],
+		'Dev Tools' : [
+			{ text: 'Introduction', link: 'en/devtools/intro' }
+		]
+	},
 };
 ```
 
@@ -169,10 +176,6 @@ That's totally fine! Not all projects need (or can support) multiple languages. 
 
 If that single language is not English, you can just replace `en` in directory layouts and configurations with the preferred language.
 
-### Search (Powered by Algolia)
+### Search - TODO
 
-[Algolia](https://www.algolia.com/) offers a free service to qualified open source projects called [DocSearch](https://docsearch.algolia.com/). If you are accepted to the DocSearch program, provide your API Key & index name in `src/config.ts` and a search box will automatically appear in your site header.
-
-Note that Aglolia and Astro are not affiliated. We have no say over acceptance to the DocSearch program.
-
-If you'd prefer to remove Algolia's search and replace it with your own, check out the `src/components/Header.astro` component to see where the component is added.
+TODO: Replace Algolia with a FOSS version 
