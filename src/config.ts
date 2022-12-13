@@ -1,5 +1,5 @@
 export const SITE = {
-	title: 'Timechain Academy',
+	title: 'Timechain Library',
 	description: '₿itcoin and ⚡️ Lightning Turbo Charged Space',
 	defaultLanguage: 'en_US',
 };
